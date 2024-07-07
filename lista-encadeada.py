@@ -5,8 +5,8 @@ class Elemento:
         self.proximo = None
 
     def __repr__(self):
-        return self.cor + ' ' + str(self.numero)
-
+        return f"[{self.cor}, {self.numero}]"
+    
 class ListaEncadeada:
     def __init__(self):
         self.head = None
@@ -64,10 +64,12 @@ class ListaEncadeada:
             print("A lista de espera está vazia.")
             return
         
+        nodos = []
         nodo_atual = self.head
         while nodo_atual:
-            print(nodo_atual)
+            nodos.append(repr(nodo_atual))
             nodo_atual = nodo_atual.proximo
+        print("Lista -> " + ", ".join(nodos))
 
     def atenderPaciente(self):
         if not self.head:

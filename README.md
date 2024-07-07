@@ -20,4 +20,19 @@ Este projeto consiste em dois programas distintos:
 5. **Atender Paciente**: Remove o primeiro paciente da fila e imprime uma mensagem chamando o paciente para atendimento.
 6. **Menu de Interação**: Oferece opções para adicionar pacientes, mostrar a fila de espera, chamar o próximo paciente, e sair do programa.
 
-// Em desenvolvimento
+## Tabela Hash para Emplacamento de Veículos
+
+### Requisitos
+- **Nodo**: Representa um estado contendo sigla, nome do estado e um ponteiro para o próximo nodo.
+- **Tabela Hash**: Contém 10 posições, cada uma representando a cabeça de uma lista encadeada.
+
+### Funcionalidades
+
+1. **Função Hash**:
+   - A entrada deve ser uma string com 2 letras, representando a sigla do estado ou distrito federal.
+   - Caso a sigla seja DF, a função deve retornar 7.
+   - Caso contrário, a função deve retornar a posição com base na soma dos valores ASCII das duas letras, modulo 10.
+2. **Inserção na Tabela Hash**: Insere um novo nodo no início da lista encadeada correspondente à posição calculada pela função hash.
+3. **Inserir Estados**: Insere todos os 26 estados e o Distrito Federal na tabela hash usando a função hash.
+4. **Inserir Estado Fictício**: Insere um estado fictício com siglas formadas pela primeira letra do nome e a primeira letra do último sobrenome.
+5. **Imprimir Tabela Hash**: Imprime as siglas de todos os nodos na tabela hash, separadas por posição.
